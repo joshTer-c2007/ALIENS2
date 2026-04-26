@@ -55,6 +55,11 @@ public class Alien {
         }
         return false;
     }
+    private void calcularPrecioTotal() {
+        this.precioTotal = precioCuerpo + 
+                          ((numeroBrazos + numeroPies) * precioExtremidad) + 
+                          (numeroOjos * precioOjo);
+    }
     
     public int getTamanio() { return tamanio; }
     public String getColor() { return color; }
