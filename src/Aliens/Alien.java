@@ -42,6 +42,19 @@ public class Alien {
         }
         return false;
     }
+    public boolean agregarOjos(int cantidad) {
+        int max = 0;
+        if (tamanio <= 10) max = 3;
+        else if (tamanio <= 20) max = 5;
+        else max = 7;
+
+        if ((this.numeroOjos + cantidad) <= max) {
+            this.numeroOjos += cantidad;
+            calcularPrecioTotal();
+            return true;
+        }
+        return false;
+    }
     
     public int getTamanio() { return tamanio; }
     public String getColor() { return color; }
